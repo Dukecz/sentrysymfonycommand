@@ -16,11 +16,12 @@ when@dev:
                 type: service
                 name: sentry_breadcrumbs
                 id: Sentry\Monolog\BreadcrumbHandler
-            sentry_buffer:
-                type: buffer
-                handler: 'sentry'
-                level: !php/const Monolog\Logger::NOTICE
-                channels: ["!sentry"]
+             # breaks sentry logging
+#            sentry_buffer:
+#                type: buffer
+#                handler: 'sentry'
+#                level: !php/const Monolog\Logger::NOTICE
+#                channels: ["!sentry"]
 
 when@test:
     monolog:
