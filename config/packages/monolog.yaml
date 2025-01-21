@@ -9,6 +9,8 @@ when@dev:
                 type: sentry
                 level: !php/const Monolog\Logger::WARNING
                 hub_id: 'Sentry\State\HubInterface'
+                fill_extra_context: true
+                process_psr_3_messages: false
             # this one acts like fingers_crossed
             sentry_breadcrumbs: # https://github.com/getsentry/sentry-php/pull/1199#issuecomment-1308936577
                 type: service
